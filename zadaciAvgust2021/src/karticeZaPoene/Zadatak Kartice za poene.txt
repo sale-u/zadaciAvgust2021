@@ -1,0 +1,51 @@
+Kartice
+
+Na benzinskim stanicama važi akcija dodavanja poena na specijalne kartice koje korisnik kasnije može iskoristiti za kupovinu.
+Postoje 2 tipa kartice:
+- Normal
+- Gold
+Uslovi su sledeći:
+Za svaki sipani litar goriva dobija 2 poena za Normal karticu i 3 poena za Gold karticu.
+Napraviti program Kartice za poene koji će obračunavati koliko poena se dobije na kojoj kartici.
+
+1. Napraviti apstraktnu klasu BasicCard sa:
+private poljima:
+- int id
+- String pan
+(Getere i setere)
+- apstraktnom metodom ispisiKarticu, koja kao ulazne parametre uzima id, pan i ispisuje ih.  
+
+2. Napraviti klasu Kartica koja će naslediti klasu BasicCard sa:
+private poljima:
+- double sipanoLitara
+- int tipkartice (1 je Normal, 2 Gold)
+
+(Getere i setere, ful i prazan konstruktor)
+
+3. Napraviti interfejs IPoeni, koji će implementirati klasa Kartica 
+-U interfejsu definisati metod int izracunajBrojPoena(Kartica kartica), koji za svaku karticu računa koliko je poena dobila u zavisnosti da li je Normal ili Gold
+
+4. Napraviti klasu Korisnik sa 
+private poljima:
+- int poeniPre (ovde se upisuje koliko poena ima Korisnik, tj koliko je sakupio do sad - to vi izmislite:))
+- List<Kartica > kartice
+(Getere i setere i prazan konstruktor)
+metode:
+-int ukupnoZaradjenihPoena(List<Kartica > kartice), koja vraća ukupno poena na svim karticama
+-void ukupnoPoenaPreIsaZaradom(int poeniPre int ukupnoZaradjenihPoena) koja ispisuje koliko sada ukupno Korisnik ima poena.
+  
+5. Napraviti klasu Statistika sa sledećim statickim metodama:
+
+- double racunajLitre(List<Kartica > kartice), koja za unetu listu Kartica računa ukupno sipanih litara.
+- int extraPoeni(Korisnik korisnik), koja za unetu listu Kartica računa extra poene tj, ukoliko je Korisnik dobio više od 100 poena dodaje mu se još 20%.
+*dodatni zadatak: void poeniKartice(String pan, List<Kartica > kartice), koja ispisuje koliko poena je dobila kartica tako što joj se unese pan.
+
+
+6. Napraviti klasu Test sa main() metodom.
+- Definisati 2 objekta klase Kartica (1 sa ful konstruktorom drugu sa praznim konstruktorom, jedna da bude Gold, druga Noramal)
+- Klasu Korisnik i poeniPre . Karticae ubaciti u polje kartice klase Korisnik.
+- Pozvati metode ukupnoZaradjenihPoena(List<Kartica > kartice),ukupnoPoenaPreIsaZaradom(int ukupniPoeni, int ukupnoZaradjenihPoena) iz klase Korisnik i prikaži rezultate.
+- Pozvati metode  racunajLitre(List<Kartica > kartice) i extraPoeni(Korisnik korisnik) iz klase Statistika i prikazati rezultate.
+* Uneti pan preko skenera i pomoću metode void poeniKartice(String pan, List<Kartica > kartice) ispisati koliko je poena dobila ta kartica.
+
+

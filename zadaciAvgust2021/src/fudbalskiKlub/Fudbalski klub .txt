@@ -1,0 +1,91 @@
+Napraviti klasu Osoba:
+-String ime
+-String prezime
+-String jmbg
+-String adresa
+
+U klasi je potrebno implementirati: javni konstruktor sa parametrima, geteri/seteri, toString metodu.
+
+Klasa Osoba implementira interfejs IOsoba u kojoj se nalaze metode:
+- boolean validacijaJmbg() - jmbg mora imati tacno 13 cifara
+- boolean validacijaAdrese() - adresa mora imati bar jedan broj i taj broj MORA biti na mestu poslednje reci.
+
+
+Napraviti klasu Fudbaler koja nasledjuje klasu Osoba i poseduje sledece atribute:
+
+-double nedeljnaPlata
+-int brojOdigranihSezona
+-String sponzor
+-boolean rezerva
+-double godisnjaZarada
+-int brojGolovaIAsistencija
+-String pozicija
+
+U klasi je potrebno implementirati: javni konstruktor sa parametrima, geteri/seteri, toString metodu.
+-atribut godisnjaZarada se racuna u konstruktoru na osnovu nedeljne plate, uzimajuci u obzir da fudbaler igra citavu godinu.
+-brojOdigranihSezona mora biti veci od 0 i treba spreciti nedozvoljen unos.
+
+
+Napraviti klasu Trener koja nasledjuje klasu Osoba i poseduje sledece atribute:
+
+-double godisnjaZarada
+-String sponzor
+-boolean svetskiTopTrener
+-int godinaRada
+-int brojTrofeja
+
+U klasi je potrebno implementirati: javni konstruktor sa parametrima, geteri/seteri, toString metodu.
+
+-svetskiTopTrener je atribut koji opisuje da li je trener top klasa (dobro poznat sirokoj masi) ili nije.
+Da bi bio top klasa potrebno je da ima brojTrofeja veci od 15 i godinaRada veci od 20.
+
+
+Napraviti klasu Fudbalski Klub koja implementira interfejs IFudbalskiKlub i poseduje sledece atribute:
+
+-String naziv
+-Trener trener
+-kolekcija Fudbalera (kolekcija po izboru)
+-int brojZaposlenih
+-int brojTrofeja
+-double godisnjiIzdaci
+
+U klasi je potrebno implementirati: javni konstruktor sa parametrima, geteri/seteri, toString metodu.
+
+-Atribut brojZaposlenih definise ukupno broj zaposlenih (broj fudbalera i trener)
+-Atribut godisnjiIzdaci predstavljaju ukupne izdatke na nivou GODINE koje fudbalski klub daje na fudbalere i trenere
+
+
+Implementira metode interefejsa IFudbalskiKlub
+
+Interfejs IFudbalskiKlub poseduje sledece metode:
+- najskupljiFudbaler() - vraca fudbalera sa najvecom godisnjom zaradom
+- najNeEfikasnijiFudbaler() - vraca fudbalera sa najmanjom produktivnoscu odnosno sa najmanjim brojem golova i asistencija
+- brojFudbaleraNaPoziciji(String pozicija) vraca  broj fudbalera koje klub ima na zadatoj poziciji
+- najJeftinijiFudbalerRezerva() - vraca fudbalera koji ima najmanju platu a rezerva je
+
+
+Napraviti klasu Premier Liga koja nasledjuje apstraktnu klasu PremierLigaKonf i sadrzi atribute:
+-String sponzor
+-kolekcija klubova (kolekcija po izboru)
+-int brojKlubova
+-int brojIgraca
+-int brojTrenera
+
+U klasi je potrebno implementirati: javni konstruktor sa parametrima, geteri/seteri, toString metodu.
+Atributi: brojKlubova, brojIgraca kao i brojTrenera, popuniti na osnovu kolekcije klubova.
+
+Redefinisati metode iz klase PremierLigaKonf.
+
+
+Napraviti apstraktnu klasu PremierLigaKonf  sa sledecim obaveznim metodama:
+- klubSaNajviseZaposlenih() - vraca klub sa najvise zaposlenih
+- prosecnaIzdaciKluba() - vraca se prosek izdataka klubova na zaposlene
+- najskupljiFudbalerLige() - vraca fudbalera koji ima najvecu platu i ispisuje i njegov klub
+- brojIgracaSponzoraLige() - vraca broj koliko fudbalera ima istog sponzora kao i liga
+
+
+
+
+Napraviti Test klasu sa sto vise podataka i istestirati sve metode.Obratiti paznju na atribute klasa koje se ne dobijaju iz test klase (vec logikom unutar klasa).
+
+
